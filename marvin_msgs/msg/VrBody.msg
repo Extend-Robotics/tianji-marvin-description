@@ -1,0 +1,11 @@
+std_msgs/Header header
+geometry_msgs/Pose left_elbow_pose
+geometry_msgs/Pose right_elbow_pose
+geometry_msgs/Pose torso_pose
+geometry_msgs/Pose head_pose
+geometry_msgs/Pose pelvis_pose
+geometry_msgs/Pose left_foot_pose
+geometry_msgs/Pose right_foot_pose
+geometry_msgs/Pose left_knee_pose
+geometry_msgs/Pose right_knee_pose
+bool[9] available 

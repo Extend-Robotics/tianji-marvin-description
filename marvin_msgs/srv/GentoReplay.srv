@@ -1,0 +1,6 @@
+int64 data
+string name
+---
+int64 error_code
+bool success
+string message

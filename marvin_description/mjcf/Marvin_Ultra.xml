@@ -1,0 +1,437 @@
+<mujoco model="Marvin Ultra_URDF_2026.1.28">
+  <default>
+    <default class="robot">
+      <default class="motor">
+        <joint />
+        <motor />
+      </default>
+      <default class="visual">
+        <geom material="visualgeom" contype="0" conaffinity="0" group="2" />
+      </default>
+      <default class="collision">
+        <geom material="collision_material" type="capsule" group="3" mass="0" density="0" />
+      </default>
+    </default>
+  </default>
+
+  <compiler angle="radian" />
+
+  <asset>
+    <material name="mat1" rgba="0 0 1 1" />
+    <material name="visualgeom" rgba="0.7 0.7 0.7 1" />
+    <material name="collision_material" rgba="1.0 0.28 0.1 0.9" />
+    <mesh name="Underpan_Base_link.STL" file="../meshes/Marvin_Ultra/Underpan_Base_simplifiy_link.STL" />
+    <mesh name="Leg_J1_Link.STL" file="../meshes/Marvin_Ultra/Leg_J1_Link.STL" />
+    <mesh name="Leg_J2_Link.STL" file="../meshes/Marvin_Ultra/Leg_J2_Link.STL" />
+    <mesh name="Leg_J3_Link.STL" file="../meshes/Marvin_Ultra/Leg_J3_Link.STL" />
+    <mesh name="Leg_J4_Link.STL" file="../meshes/Marvin_Ultra/Leg_J4_Link.STL" />
+    <mesh name="Leg_J5_Link.STL" file="../meshes/Marvin_Ultra/Leg_J5_Link.STL" />
+    <mesh name="Leg_J6_Link.STL" file="../meshes/Marvin_Ultra/Leg_J6_Link.STL" />
+    <mesh name="Head_J1_Link.STL" file="../meshes/Marvin_Ultra/Head_J1_Link.STL" />
+    <mesh name="Head_J2_Link.STL" file="../meshes/Marvin_Ultra/Head_J2_Link.STL" />
+    <mesh name="Base_L.STL" file="../meshes/m3/Base_L.STL" />
+    <mesh name="Link1_L.STL" file="../meshes/m3/Link1_L.STL" />
+    <mesh name="Link2_L.STL" file="../meshes/m3/Link2_L.STL" />
+    <mesh name="Link3_L.STL" file="../meshes/m3/Link3_L.STL" />
+    <mesh name="Link4_L.STL" file="../meshes/m3/Link4_L.STL" />
+    <mesh name="Link5_L.STL" file="../meshes/m3/Link5_L.STL" />
+    <mesh name="Link6_L.STL" file="../meshes/m3/Link6_L.STL" />
+    <mesh name="Link7_L.STL" file="../meshes/m3/Link7_L.STL" />
+    <mesh name="Base_R.STL" file="../meshes/m3/Base_R.STL" />
+    <mesh name="Link1_R.STL" file="../meshes/m3/Link1_R.STL" />
+    <mesh name="Link2_R.STL" file="../meshes/m3/Link2_R.STL" />
+    <mesh name="Link3_R.STL" file="../meshes/m3/Link3_R.STL" />
+    <mesh name="Link4_R.STL" file="../meshes/m3/Link4_R.STL" />
+    <mesh name="Link5_R.STL" file="../meshes/m3/Link5_R.STL" />
+    <mesh name="Link6_R.STL" file="../meshes/m3/Link6_R.STL" />
+    <mesh name="Link7_R.STL" file="../meshes/m3/Link7_R.STL" />
+  </asset>
+
+  <worldbody>
+    <body name="base_link" pos="0 0 0.0" quat="1.0 0.0 0.0 0.0" childclass="robot">
+      <body name="Underpan_Base_link" pos="0 0 0" quat="1.0 0.0 0.0 0.0">
+        <inertial pos="0.15 -0.0 -0.08533949" quat="1.0 0.0 0.0 0.0" mass="91.13"
+          diaginertia="6.2017231 6.0077372 6.6799969" />
+        <geom name="Underpan_Base_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+          mesh="Underpan_Base_link.STL" class="collision" />
+        <geom name="Underpan_Base_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+          mesh="Underpan_Base_link.STL" class="visual" />
+        <body name="Leg_J1_Link" pos="0.093 0 0"
+          quat="0.4999981633974483 0.49999999999662686 0.5000018366025516 0.49999999999662686">
+          <joint name="Leg_J1_Joint" type="hinge" ref="0.0" class="motor" range="-0.5236 0.5236"
+            axis="0 0 1" />
+          <site name="Leg_J1_Joint_site" pos="0 0 0" quat="1 0 0 0" />
+          <inertial pos="-0.01082075 0.00387295 -0.00593269" quat="1.0 0.0 0.0 0.0" mass="5.518"
+            diaginertia="0.02001314 0.01789574 0.01413422" />
+          <geom name="Leg_J1_Link_collision" size="0.07" fromto="0 0 -0.10 0 0 0.07"
+            class="collision" />
+          <geom name="Leg_J1_Link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+            mesh="Leg_J1_Link.STL" class="visual" />
+          <body name="Leg_J2_Link" pos="0 0 0" quat="0.7071054825112363 0.0 -0.7071080798594735 0.0">
+            <joint name="Leg_J2_Joint" type="hinge" ref="0.0" class="motor" range="-1.4835 0.5236"
+              axis="0 0 1" />
+            <site name="Leg_J2_Joint_site" pos="0 0 0" quat="1 0 0 0" />
+            <inertial pos="-0.00089738 0.23016029 0.00790954" quat="1.0 0.0 0.0 0.0"
+              mass="7.3099823" diaginertia="0.51536571 0.0278392 0.51521426" />
+            <geom name="Leg_J2_Link_collision" size="0.12" fromto="0 0 0 0 0.3 0" class="collision" />
+            <geom name="Leg_J2_Link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+              mesh="Leg_J2_Link.STL" class="visual" />
+            <body name="Leg_J3_Link" pos="0 0.3 0" quat="1.0 0.0 0.0 0.0">
+              <joint name="Leg_J3_Joint" type="hinge" ref="0.0" class="motor" range="0.4 2.5307"
+                axis="0 0 1" />
+              <site name="Leg_J3_Joint_site" pos="0 0 0" quat="1 0 0 0" />
+              <inertial pos="0.00865229 0.13494754 -0.01500457" quat="1.0 0.0 0.0 0.0"
+                mass="3.4476637" diaginertia="0.13522209 0.00704875 0.12848576" />
+              <geom name="Leg_J3_Link_collision" size="0.12" fromto="0 0 0 0 0.3 0"
+                class="collision" />
+              <geom name="Leg_J3_Link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+                mesh="Leg_J3_Link.STL" class="visual" />
+              <body name="Leg_J4_Link" pos="0 0.3 0" quat="1.0 0.0 0.0 0.0">
+                <joint name="Leg_J4_Joint" type="hinge" ref="0.0" class="motor" range="-1.4835 0.3"
+                  axis="0 0 1" />
+                <site name="Leg_J4_Joint_site" pos="0 0 0" quat="1 0 0 0" />
+                <inertial pos="-0.0377824 0.00327962 0.01691895" quat="1.0 0.0 0.0 0.0"
+                  mass="6.7521074" diaginertia="0.01633248 0.0474537 0.04593688" />
+                <geom name="Leg_J4_Link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                  mesh="Leg_J4_Link.STL" class="collision" />
+                <geom name="Leg_J4_Link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+                  mesh="Leg_J4_Link.STL" class="visual" />
+                <body name="Leg_J5_Link" pos="0 0 0"
+                  quat="0.7071054825112363 0.0 0.7071080798594735 0.0">
+                  <joint name="Leg_J5_Joint" type="hinge" ref="0.0" class="motor" range="-0.2 0.2"
+                    axis="0 0 1" />
+                  <site name="Leg_J5_Joint_site" pos="0 0 0" quat="1 0 0 0" />
+                  <inertial pos="-0.00114217 0.13017545 -0.01115972" quat="1.0 0.0 0.0 0.0"
+                    mass="3.9468269" diaginertia="0.1014756 0.02087895 0.08986108" />
+                  <geom name="Leg_J5_Link_collision" size="0.07" fromto="0 0 0 0 0 -0.15"
+                    class="collision" />
+                  <geom name="Leg_J5_Link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+                    mesh="Leg_J5_Link.STL" class="visual" />
+                  <body name="Leg_J6_Link" pos="0 0 0"
+                    quat="0.4999981633974483 -0.49999999999662686 -0.49999999999662686 -0.5000018366025516">
+                    <joint name="Leg_J6_Joint" type="hinge" ref="0.0" class="motor"
+                      range="-1.57 1.57" axis="0 0 1" />
+                    <site name="Leg_J6_Joint_site" pos="0 0 0" quat="1 0 0 0" />
+                    <inertial pos="0.00093411 0.00177647 0.34965197" quat="1.0 0.0 0.0 0.0"
+                      mass="9.5221899" diaginertia="1.2637405 1.2458381 0.05627763" />
+                    <geom name="Leg_J6_Link_collision" size="0.12" fromto="0 0 0 0 0 0.45"
+                      class="collision" />
+                    <geom name="Leg_J6_Link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+                      mesh="Leg_J6_Link.STL" class="visual" />
+                    <body name="Head_J1_Link" pos="-0.0135 0 0.64" quat="1.0 0.0 0.0 0.0">
+                      <joint name="Head_J1_Joint" type="hinge" ref="0.0" class="motor"
+                        range="-1.5708 1.5708" axis="0 0 1" />
+                      <site name="Head_J1_Joint_site" pos="0 0 0" quat="1 0 0 0" />
+                      <inertial pos="-3.5275E-08 -0.0 0.0012515" quat="1.0 0.0 0.0 0.0" mass="1.388"
+                        diaginertia="0.0023539 0.00023767 0.0023367" />
+                      <!-- <geom name="Head_J1_Link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                      type="mesh" mesh="Head_J1_Link.STL" class="collision" /> -->
+                      <geom name="Head_J1_Link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                        type="mesh" mesh="Head_J1_Link.STL" class="visual" />
+                      <body name="Head_J2_Link" pos="0 0 0"
+                        quat="0.7071054825112363 0.7071080798594735 0.0 0.0">
+                        <joint name="Head_J2_Joint" type="hinge" ref="0.0" class="motor"
+                          range="-0.2363 0.31087" axis="0 0 -1" />
+                        <site name="Head_J2_Joint_site" pos="0 0 0" quat="1 0 0 0" />
+                        <inertial pos="0.021932 0.039063 -0.00027743" quat="1.0 0.0 0.0 0.0"
+                          mass="0.50512" diaginertia="0.0016475 0.0010555 0.0013656" />
+                        <!-- <geom name="Head_J2_Link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                        type="mesh" mesh="Head_J2_Link.STL" class="collision" /> -->
+                        <geom name="Head_J2_Link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                          type="mesh" mesh="Head_J2_Link.STL" class="visual" />
+                        <body name="eyes_link" pos="0.05 0.03 0"
+                          quat="0.7073882691671998 -0.706825181105366 0.0 0.0" />
+                      </body>
+                    </body>
+                    <body name="Base_L" pos="0 0.0585 0.423"
+                      quat="0.7073882691671998 -0.706825181105366 0.0 0.0">
+                      <inertial pos="0.00026267 0.00011932 0.03306285" quat="1.0 0.0 0.0 0.0"
+                        mass="1.03862143" diaginertia="0.00071755 0.00071148 0.00091518" />
+                      <!-- <geom name="Base_L_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                      type="mesh" mesh="Base_L.STL" class="collision" /> -->
+                      <geom name="Base_L_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+                        mesh="Base_L.STL" class="visual" />
+                      <body name="Link1_L" pos="0 0 0.177" quat="1.0 0.0 0.0 0.0">
+                        <joint name="Joint1_L" type="hinge" ref="0.0" class="motor"
+                          range="-0.75 3.1067" axis="0 0 1" />
+                        <site name="Joint1_L_site" pos="0 0 0" quat="1 0 0 0" />
+                        <inertial pos="0.00005324 0.00445236 -0.03913569" quat="1.0 0.0 0.0 0.0"
+                          mass="1.77724008" diaginertia="0.00530846 0.00555862 0.0013352" />
+                        <geom name="Link1_L_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                          mesh="Link1_L.STL" class="collision" />
+                        <geom name="Link1_L_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+                          mesh="Link1_L.STL" class="visual" />
+                        <body name="Link2_L" pos="0 0 0"
+                          quat="0.7071054825112363 0.7071080798594735 0.0 0.0">
+                          <joint name="Joint2_L" type="hinge" ref="0.0" class="motor"
+                            range="-2.0944 0.5" axis="0 0 1" />
+                          <site name="Joint2_L_site" pos="0 0 0" quat="1 0 0 0" />
+                          <inertial pos="-0.00010498 0.05321718 0.00787641" quat="1.0 0.0 0.0 0.0"
+                            mass="1.60894018" diaginertia="0.00632572 0.00182184 0.0059412" />
+                          <geom name="Link2_L_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                            mesh="Link2_L.STL" class="collision" />
+                          <geom name="Link2_L_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+                            mesh="Link2_L.STL" class="visual" />
+                          <body name="Link3_L" pos="0 0.272 0"
+                            quat="0.7071054825112363 -0.7071080798594735 0.0 0.0">
+                            <joint name="Joint3_L" type="hinge" ref="0.0" class="motor"
+                              range="-3.1067 0" axis="0 0 1" />
+                            <site name="Joint3_L_site" pos="0 0 0" quat="1 0 0 0" />
+                            <inertial pos="0.00810489 0.00245578 -0.05500367" quat="1.0 0.0 0.0 0.0"
+                              mass="1.27082930" diaginertia="0.00491773 0.00519354 0.00102662" />
+                            <geom name="Link3_L_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                              mesh="Link3_L.STL" class="collision" />
+                            <geom name="Link3_L_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                              type="mesh" mesh="Link3_L.STL" class="visual" />
+                            <body name="Link4_L" pos="0.018 0 0"
+                              quat="-2.5973434669646147e-06 2.597353007557415e-06 -0.7071080798547033 0.707105482506466">
+                              <joint name="Joint4_L" type="hinge" ref="0.0" class="motor"
+                                range="-3.1067 -0.2" axis="0 0 1" />
+                              <site name="Joint4_L_site" pos="0 0 0" quat="1 0 0 0" />
+                              <inertial pos="0.00709286 -0.03304509 0.00893402"
+                                quat="1.0 0.0 0.0 0.0" mass="0.96124622"
+                                diaginertia="0.0025498 0.00107965 0.00235605" />
+                              <geom name="Link4_L_collision" type="capsule" size="0.06"
+                                fromto="0.00 0.01 0 0.01 -0.1 0" class="collision" />
+                              <geom name="Link4_L_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                                type="mesh" mesh="Link4_L.STL" class="visual" />
+                              <body name="Link5_L" pos="0.018 -0.256 0"
+                                quat="-2.5973434669646147e-06 2.597353007557415e-06 -0.7071080798547033 0.707105482506466">
+                                <joint name="Joint5_L" type="hinge" ref="0.0" class="motor"
+                                  range="-3.1067 3.1067" axis="0 0 1" />
+                                <site name="Joint5_L_site" pos="0 0 0" quat="1 0 0 0" />
+                                <inertial pos="-0.00062313 0.00098400 -0.09276174"
+                                  quat="1.0 0.0 0.0 0.0" mass="0.90217469"
+                                  diaginertia="0.00189248 0.00174389 0.0007508" />
+                                <geom name="Link5_L_collision" type="capsule" size="0.055"
+                                  fromto="0.00 0 0 0.00  0 -0.08" class="collision" />
+                                <geom name="Link5_L_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                                  type="mesh" mesh="Link5_L.STL" class="visual" />
+                                <body name="Link6_L" pos="0 0 0"
+                                  quat="0.4999981633974483 0.49999999999662686 -0.49999999999662686 0.5000018366025516">
+                                  <joint name="Joint6_L" type="hinge" ref="0.0" class="motor"
+                                    range="-1.0472 1.0472" axis="0 0 1" />
+                                  <site name="Joint6_L_site" pos="0 0 0" quat="1 0 0 0" />
+                                  <inertial pos="0.00031369 0.00024238 -0.00041391"
+                                    quat="1.0 0.0 0.0 0.0" mass="0.33261055"
+                                    diaginertia="0.00015388 0.00015258 0.00013812" />
+                                  <!-- <geom name="Link6_L_collision" pos="0 0 0" quat="1.0 0.0 0.0
+                                  0.0" type="mesh" mesh="Link6_L.STL" class="collision" /> -->
+                                  <geom name="Link6_L_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                                    type="mesh" mesh="Link6_L.STL" class="visual" />
+                                  <body name="Link7_L" pos="0 0 0"
+                                    quat="0.4999981633974483 0.49999999999662686 -0.49999999999662686 0.5000018366025516">
+                                    <joint name="Joint7_L" type="hinge" ref="0.0" class="motor"
+                                      range="-1.5708 1.5708" axis="0 0 1" />
+                                    <site name="Joint7_L_site" pos="0 0 0" quat="1 0 0 0" />
+                                    <inertial pos="-0.00006959 -0.03969936 0.00413997"
+                                      quat="1.0 0.0 0.0 0.0" mass="0.30535389"
+                                      diaginertia="0.00058153 0.00026536 0.00048333" />
+                                    <!-- <geom name="Link7_L_collision" pos="0 0 0" quat="1.0 0.0
+                                    0.0 0.0" type="mesh" mesh="Link7_L.STL" class="collision" /> -->
+                                    <geom name="Link7_L_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                                      type="mesh" mesh="Link7_L.STL" class="visual" />
+                                    <body name="flange_L" pos="0.0 -0.088 0.0"
+                                      quat="0.4999981633974483 0.49999999999662686 -0.49999999999662686 0.5000018366025516">
+                                      <body name="left_tool" pos="0 0.00 .05"
+                                        quat="0.0005633121735972125 0.707388044876899 -0.0005628637715330792 0.7068249569936026">
+                                        <site name="left_tool_site" pos="0.0 0 0" />
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                    <body name="Base_R" pos="0 -0.0585 0.423"
+                      quat="0.7073882691671998 0.706825181105366 0.0 0.0">
+                      <inertial pos="0.00026267 0.00011932 0.03306285" quat="1.0 0.0 0.0 0.0"
+                        mass="1.03862143" diaginertia="0.00071755 0.00071148 0.00091518" />
+                      <!-- <geom name="Base_R_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                      type="mesh" mesh="Base_R.STL" class="collision" /> -->
+                      <geom name="Base_R_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+                        mesh="Base_R.STL" class="visual" />
+                      <body name="Link1_R" pos="0 0 0.177" quat="1.0 0.0 0.0 0.0">
+                        <joint name="Joint1_R" type="hinge" ref="0.0" class="motor"
+                          range="-3.1067 0.75" axis="0 0 1" />
+                        <site name="Joint1_R_site" pos="0 0 0" quat="1 0 0 0" />
+                        <inertial pos="0.00005324 0.00445236 -0.03913569" quat="1.0 0.0 0.0 0.0"
+                          mass="1.77724008" diaginertia="0.00530846 0.00555862 0.0013352" />
+                        <geom name="Link1_R_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                          mesh="Link1_R.STL" class="collision" />
+                        <geom name="Link1_R_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+                          mesh="Link1_R.STL" class="visual" />
+                        <body name="Link2_R" pos="0 0 0"
+                          quat="0.7071054825112363 0.7071080798594735 0.0 0.0">
+                          <joint name="Joint2_R" type="hinge" ref="0.0" class="motor"
+                            range="-2.0944 0.5" axis="0 0 1" />
+                          <site name="Joint2_R_site" pos="0 0 0" quat="1 0 0 0" />
+                          <inertial pos="-0.00010498 0.05321718 0.00787641" quat="1.0 0.0 0.0 0.0"
+                            mass="1.60894018" diaginertia="0.00632572 0.00182184 0.0059412" />
+                          <geom name="Link2_R_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                            mesh="Link2_R.STL" class="collision" />
+                          <geom name="Link2_R_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh"
+                            mesh="Link2_R.STL" class="visual" />
+                          <body name="Link3_R" pos="0 0.272 0"
+                            quat="0.7071054825112363 -0.7071080798594735 0.0 0.0">
+                            <joint name="Joint3_R" type="hinge" ref="0.0" class="motor"
+                              range="0 3.1067" axis="0 0 1" />
+                            <site name="Joint3_R_site" pos="0 0 0" quat="1 0 0 0" />
+                            <inertial pos="0.00810489 0.00245578 -0.05500367" quat="1.0 0.0 0.0 0.0"
+                              mass="1.27082930" diaginertia="0.00491773 0.00519354 0.00102662" />
+                            <geom name="Link3_R_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                              mesh="Link3_R.STL" class="collision" />
+                            <geom name="Link3_R_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                              type="mesh" mesh="Link3_R.STL" class="visual" />
+                            <body name="Link4_R" pos="0.018 0 0"
+                              quat="-2.5973434669646147e-06 2.597353007557415e-06 -0.7071080798547033 0.707105482506466">
+                              <joint name="Joint4_R" type="hinge" ref="0.0" class="motor"
+                                range="-3.1067 -0.2" axis="0 0 1" />
+                              <site name="Joint4_R_site" pos="0 0 0" quat="1 0 0 0" />
+                              <!-- <inertial pos="0.00709286 -0.03304509 0.00893402" quat="1.0 0.0
+                              0.0 0.0" mass="0.96124622" diaginertia="0.0025498 0.00107965
+                              0.00235605" /> -->
+                              <geom name="Link4_R_collision" class="collision" type="capsule"
+                                size="0.06" fromto="0.00 0.01 0 0.01 -0.1 0" group="3" />
+                              <geom name="Link4_R_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                                type="mesh" mesh="Link4_R.STL" class="visual" />
+                              <body name="Link5_R" pos="0.018 -0.256 0"
+                                quat="-2.5973434669646147e-06 2.597353007557415e-06 -0.7071080798547033 0.707105482506466">
+                                <joint name="Joint5_R" type="hinge" ref="0.0" class="motor"
+                                  range="-3.1067 3.1067" axis="0 0 1" />
+                                <site name="Joint5_R_site" pos="0 0 0" quat="1 0 0 0" />
+                                <inertial pos="0.00062313 -0.00098400 -0.09276174"
+                                  quat="1.0 0.0 0.0 0.0" mass="0.90217469"
+                                  diaginertia="0.00189248 0.00174389 0.0007508" />
+                                <geom name="Link5_R_collision" class="collision" type="capsule"
+                                  size="0.055" fromto="0.00 0 0 0.00  0 -0.08" group="3" />
+                                <geom name="Link5_R_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                                  type="mesh" mesh="Link5_R.STL" class="visual" />
+                                <body name="Link6_R" pos="0 0 0"
+                                  quat="0.4999981633974483 0.49999999999662686 -0.49999999999662686 0.5000018366025516">
+                                  <joint name="Joint6_R" type="hinge" ref="0.0" class="motor"
+                                    range="-1.0472 1.0472" axis="0 0 1" />
+                                  <site name="Joint6_R_site" pos="0 0 0" quat="1 0 0 0" />
+                                  <inertial pos="-0.00031369 0.00024238 0.00041391"
+                                    quat="1.0 0.0 0.0 0.0" mass="0.33261055"
+                                    diaginertia="0.00015479 0.00015429 0.00013902" />
+                                  <!-- <geom name="Link6_R_collision" pos="0 0 0" quat="1.0 0.0 0.0
+                                  0.0" type="mesh" mesh="Link6_R.STL" class="collision" /> -->
+                                  <geom name="Link6_R_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                                    type="mesh" mesh="Link6_R.STL" class="visual" />
+                                  <body name="Link7_R" pos="0 0 0"
+                                    quat="0.4999981633974483 0.49999999999662686 -0.49999999999662686 0.5000018366025516">
+                                    <joint name="Joint7_R" type="hinge" ref="0.0" class="motor"
+                                      range="-1.5708 1.5708" axis="0 0 1" />
+                                    <site name="Joint7_R_site" pos="0 0 0" quat="1 0 0 0" />
+                                    <inertial pos="-0.00006959 -0.03969936 0.00413997"
+                                      quat="1.0 0.0 0.0 0.0" mass="0.30535389"
+                                      diaginertia="0.00058153 0.00026536 0.00048333" />
+                                    <!-- <geom name="Link7_R_collision" pos="0 0 0" quat="1.0 0.0
+                                    0.0 0.0" type="mesh" mesh="Link7_R.STL" class="collision" /> -->
+                                    <geom name="Link7_R_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0"
+                                      type="mesh" mesh="Link7_R.STL" class="visual" />
+                                    <body name="flange_R" pos="0.0 -0.088 0.0"
+                                      quat="0.4999981633974483 0.49999999999662686 -0.49999999999662686 0.5000018366025516">
+                                      <body name="right_tool" pos="0 -0.00 .05"
+                                        quat="0.0005633121735972125 -0.707388044876899 -0.0005628637715330792 -0.7068249569936026">
+                                        <site name="right_tool_site" pos="0.0 0 0" />
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                    <body name="torso_link" pos="0 0 0.423" quat="1.0 0.0 0.0 0.0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+
+      <camera name="front_camera" mode="track" fovy="90.0"
+        quat="4.329780281177467e-17 4.329780281177466e-17 0.7071067811865475 0.7071067811865476"
+        pos="0.0 2.0 0.5" />
+      <camera name="side_camera" mode="track" fovy="90.0"
+        quat="-0.5 -0.4999999999999999 0.5 0.5000000000000001" pos="-2.0 0.0 0.5" />
+      <body name="tracking_base_link" pos="0.1 0 -0.15" quat="1.0 0.0 0.0 0.0"></body>
+    </body>
+    
+  </worldbody>
+
+  <actuator>
+    <motor name="Leg_J1_Joint_ctrl" joint="Leg_J1_Joint" class="motor" />
+    <motor name="Leg_J2_Joint_ctrl" joint="Leg_J2_Joint" class="motor" />
+    <motor name="Leg_J3_Joint_ctrl" joint="Leg_J3_Joint" class="motor" />
+    <motor name="Leg_J4_Joint_ctrl" joint="Leg_J4_Joint" class="motor" />
+    <motor name="Leg_J5_Joint_ctrl" joint="Leg_J5_Joint" class="motor" />
+    <motor name="Leg_J6_Joint_ctrl" joint="Leg_J6_Joint" class="motor" />
+    <motor name="Head_J1_Joint_ctrl" joint="Head_J1_Joint" class="motor" />
+    <motor name="Head_J2_Joint_ctrl" joint="Head_J2_Joint" class="motor" />
+    <motor name="Joint1_L_ctrl" joint="Joint1_L" class="motor" />
+    <motor name="Joint2_L_ctrl" joint="Joint2_L" class="motor" />
+    <motor name="Joint3_L_ctrl" joint="Joint3_L" class="motor" />
+    <motor name="Joint4_L_ctrl" joint="Joint4_L" class="motor" />
+    <motor name="Joint5_L_ctrl" joint="Joint5_L" class="motor" />
+    <motor name="Joint6_L_ctrl" joint="Joint6_L" class="motor" />
+    <motor name="Joint7_L_ctrl" joint="Joint7_L" class="motor" />
+    <motor name="Joint1_R_ctrl" joint="Joint1_R" class="motor" />
+    <motor name="Joint2_R_ctrl" joint="Joint2_R" class="motor" />
+    <motor name="Joint3_R_ctrl" joint="Joint3_R" class="motor" />
+    <motor name="Joint4_R_ctrl" joint="Joint4_R" class="motor" />
+    <motor name="Joint5_R_ctrl" joint="Joint5_R" class="motor" />
+    <motor name="Joint6_R_ctrl" joint="Joint6_R" class="motor" />
+    <motor name="Joint7_R_ctrl" joint="Joint7_R" class="motor" />
+  </actuator>
+
+  <contact>
+    <exclude body1="Base_L" body2="Link1_L" />
+    <exclude body1="Link1_L" body2="Link2_L" />
+    <exclude body1="Link2_L" body2="Link3_L" />
+    <exclude body1="Link3_L" body2="Link4_L" />
+    <exclude body1="Link4_L" body2="Link5_L" />
+    <exclude body1="Link5_L" body2="Link6_L" />
+    <exclude body1="Link6_L" body2="Link7_L" />
+    <exclude body1="Base_R" body2="Link1_R" />
+    <exclude body1="Link1_R" body2="Link2_R" />
+    <exclude body1="Link2_R" body2="Link3_R" />
+    <exclude body1="Link3_R" body2="Link4_R" />
+    <exclude body1="Link4_R" body2="Link5_R" />
+    <exclude body1="Link5_R" body2="Link6_R" />
+    <exclude body1="Link6_R" body2="Link7_R" />
+    <exclude body1="Underpan_Base_link" body2="Leg_J1_Link" />
+    <exclude body1="Leg_J1_Link" body2="Leg_J2_Link" />
+    <exclude body1="Leg_J2_Link" body2="Leg_J3_Link" />
+    <exclude body1="Leg_J3_Link" body2="Leg_J4_Link" />
+    <exclude body1="Leg_J4_Link" body2="Leg_J5_Link" />
+    <exclude body1="Leg_J5_Link" body2="Leg_J6_Link" />
+    <exclude body1="Leg_J6_Link" body2="Head_J1_Link" />
+    <exclude body1="Head_J1_Link" body2="Head_J2_Link" />
+    <exclude body1="Leg_J6_Link" body2="Base_L" />
+    <exclude body1="Leg_J6_Link" body2="Base_R" />
+  </contact>
+
+  <sensor>
+    <framepos name="Leg_J1_Joint_site_pos" objtype="site" objname="Leg_J1_Joint_site" />
+    <framequat name="Leg_J1_Joint_site_quat" objtype="site" objname="Leg_J1_Joint_site" />
+    <framelinvel name="Leg_J1_Joint_site_linvel" objtype="site" objname="Leg_J1_Joint_site" />
+    <frameangvel name="Leg_J1_Joint_site_angvel" objtype="site" objname="Leg_J1_Joint_site" />
+    <velocimeter name="Leg_J1_Joint_site_vel" site="Leg_J1_Joint_site" />
+  </sensor>
+
+  <keyframe>
+
+    <key name="home"
+      qpos="0.0 -0.3 0.6 -0.3 0.0 0.0 0.0 0.0 1.57 -1.57 -1.57 -1.57 0.0 0.0 0.0 -1.57 -1.57 1.57 -1.57 0.0 0.0 0.0"
+    />
+  </keyframe>
+</mujoco>

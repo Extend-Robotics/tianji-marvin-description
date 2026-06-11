@@ -1,0 +1,47 @@
+/**:
+  ros__parameters:
+    robot_type: m6
+    robot_ip: 169.254.128.190
+    left_joints:
+      - Joint1_L
+      - Joint2_L
+      - Joint3_L
+      - Joint4_L
+      - Joint5_L
+      - Joint6_L
+      - Joint7_L
+    right_joints:
+      - Joint1_R
+      - Joint2_R
+      - Joint3_R
+      - Joint4_R
+      - Joint5_R
+      - Joint6_R
+      - Joint7_R
+    head_joints:
+      - Joint1_H
+      - Joint2_H
+      - Joint3_H
+    lift_joints:
+      - Joint1_B
+    body_joints:
+      - Joint2_B
+      - Joint3_B
+      - Joint4_B
+      - Joint5_B
+      - Joint6_B
+    left_base_name: Base_L
+    right_base_name: Base_R
+    eef_name_left: Joint7_L
+    eef_name_right: Joint7_R
+    elbow_ref_dir: [0.0, 0.75, 0.75]
+    left_pd:
+      k: [2.0,2.0,2.0,2.0,2.0,1.0,1.0]
+      d: [0.4,0.4,0.4,0.4,0.4,0.4,0.4]
+    right_pd:
+      k: [2.0,2.0,2.0,2.0,2.0,1.0,1.0]
+      d: [0.4,0.4,0.4,0.4,0.4,0.4,0.4]
+    left_tool: [0.6, 0.0, 0.0, 50.0, 0.004, 0.0, 0.0, 0.004, 0.0, 0.03]
+    right_tool: [0.6, 0.0, 0.0, 50.0, 0.004, 0.0, 0.0, 0.004, 0.0, 0.03]
+    body_supported_control_modes: [1, 2]
+    lift_supported_control_modes: [1]

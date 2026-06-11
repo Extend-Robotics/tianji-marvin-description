@@ -1,0 +1,47 @@
+/**:
+  ros__parameters:
+    robot_type: ultra
+    robot_ip: 6.6.7.190
+    left_joints:
+      - Joint1_L
+      - Joint2_L
+      - Joint3_L
+      - Joint4_L
+      - Joint5_L
+      - Joint6_L
+      - Joint7_L
+    right_joints:
+      - Joint1_R
+      - Joint2_R
+      - Joint3_R
+      - Joint4_R
+      - Joint5_R
+      - Joint6_R
+      - Joint7_R
+    head_joints:
+      - Head_J1_Joint
+      - Head_J2_Joint
+    body_joints:
+      - Leg_J1_Joint
+      - Leg_J2_Joint
+      - Leg_J3_Joint
+      - Leg_J4_Joint
+      - Leg_J5_Joint
+      - Leg_J6_Joint
+    left_pd:
+      k: [6.0,6.0,4.0,3.0,2.0,2.0,1.0]
+      d: [1.0,1.0,0.6,0.6,0.4,0.2,0.2]
+    right_pd:
+      k: [6.0,6.0,4.0,3.0,2.0,2.0,1.0]
+      d: [1.0,1.0,0.6,0.6,0.4,0.2,0.2]
+    body_pd:
+      k: [28.0, 26.0, 28.0, 14.0, 6.0, 4.0]
+      d: [5.5, 3.7, 2.0, 2.2, 2.0, 0.6]
+    left_tool: [1.3, 0.0, 0.0, 80.0, 0.004, 0.0, 0.0, 0.004, 0.0, 0.03]
+    right_tool: [1.3, 0.0, 0.0, 80.0, 0.004, 0.0, 0.0, 0.004, 0.0, 0.03]
+    speed_ratio: 100
+    accel_ratio: 100
+    mode1_targets: [1, 1, 1, 0] #arm head body lift
+    mode3_targets: [2, 1, 2, 0]
+    arm_supported_control_modes: [1, 2]
+    body_supported_control_modes: [1,2]

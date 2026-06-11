@@ -1,0 +1,47 @@
+/**:
+  ros__parameters:
+    robot_type: Gento_Luna
+    robot_ip: 6.6.7.190
+    left_joints:
+      - Arm_L1_Joint
+      - Arm_L2_Joint
+      - Arm_L3_Joint
+      - Arm_L4_Joint
+      - Arm_L5_Joint
+      - Arm_L6_Joint
+      - Arm_L7_Joint
+    right_joints:
+      - Arm_R1_Joint
+      - Arm_R2_Joint
+      - Arm_R3_Joint
+      - Arm_R4_Joint
+      - Arm_R5_Joint
+      - Arm_R6_Joint
+      - Arm_R7_Joint
+    head_joints:
+      - Head_J1_joint
+      - Head_J2_joint
+    body_joints:
+      - Leg_J1_Joint
+      - Leg_J2_Joint
+      - Leg_J3_Joint
+      - Leg_J4_Joint
+      - Leg_J5_Joint
+      - Leg_J6_Joint
+    left_pd:
+      k: [3.0,3.0,3.0,3.0,0.5,0.5,0.5]
+      d: [0.6,0.2,0.2,0.16,0.0,0.0,0.0]
+    right_pd:
+      k: [3.0,3.0,3.0,3.0,0.5,0.5,0.5]
+      d: [0.6,0.2,0.2,0.16,0.0,0.0,0.0]
+    body_pd:
+      k: [80.0, 80.0, 80.0, 30.0, 30.0, 20.0]
+      d: [8.0, 6.0, 6.0, 3.0, 2.0, 1.0]
+    left_tool: [1.3, 0.0, 0.0, 80.0, 0.004, 0.0, 0.0, 0.004, 0.0, 0.03]
+    right_tool: [1.3, 0.0, 0.0, 80.0, 0.004, 0.0, 0.0, 0.004, 0.0, 0.03]
+    speed_ratio: 100
+    accel_ratio: 100
+    mode1_targets: [1, 1, 1, 0] #arm head body lift
+    mode3_targets: [2, 1, 2, 0]
+    arm_supported_control_modes: [1, 2]
+    body_supported_control_modes: [1,2]
